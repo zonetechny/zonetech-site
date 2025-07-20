@@ -1,0 +1,471 @@
+/* ===== GLOBAL STYLES ===== */
+body { 
+  background-color: #f8f9fa; 
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+}
+
+/* ===== NAVIGATION ===== */
+.navbar {
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.navbar-brand {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+.hero .card{
+    position: relative;
+    z-index: 2;             /* above the overlay’s z‑index:1 */
+  }
+  
+.nav-link {
+  font-weight: 500;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: #000 !important;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background-color: #000;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+  position: relative;
+  padding-top: 45%; /* Slightly taller for better impact */
+  background-size: cover;
+  background-position: center;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.hero:hover {
+  transform: translateY(-5px);
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.1) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(3rem, 8vw, 6rem);
+  line-height: 0.85;
+  color: #fff;
+  text-shadow: 0 4px 8px rgba(0,0,0,0.5);
+  position: relative;
+  z-index: 2;
+  animation: fadeInUp 1s ease-out;
+}
+
+.hero-sub {
+  font-weight: 300;
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  position: relative;
+  z-index: 2;
+  animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== SALES CARD ===== */
+.card {
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* ===== PRODUCT SECTIONS ===== */
+.product-square {
+  min-height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 16px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  cursor: pointer;
+}
+
+.product-square:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  border-color: #000;
+  background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+}
+
+.product-square.black {
+  background: linear-gradient(135deg, #000 0%, #1a1a1a 100%);
+  color: #fff;
+  border-color: #000;
+}
+
+.product-square.black:hover {
+  background: linear-gradient(135deg, #1a1a1a 0%, #000 100%);
+  transform: translateY(-3px) scale(1.02);
+}
+
+/* Product section cards */
+.bg-white.rounded-4 {
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.bg-white.rounded-4:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* ===== TYPOGRAPHY ===== */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.text-muted {
+  color: #6c757d !important;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: linear-gradient(135deg, #1a1a1a 0%, #000 100%);
+  position: relative;
+}
+
+footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.2) 50%, transparent 100%);
+}
+
+footer a {
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #fff !important;
+}
+
+footer .bi {
+  transition: transform 0.3s ease;
+}
+
+footer a:hover .bi {
+  transform: scale(1.2);
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+  .hero {
+    padding-top: 60%;
+    border-radius: 16px;
+  }
+  
+  .hero-title {
+    font-size: 3rem;
+  }
+  
+  .product-square {
+    min-height: 100px;
+    font-size: 0.8rem;
+  }
+  
+  .navbar {
+    border-radius: 12px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-sub {
+    font-size: 1.1rem;
+  }
+}
+
+/* ===== SMOOTH SCROLLING ===== */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===== FOCUS STATES ===== */
+.btn:focus,
+.nav-link:focus,
+.product-square:focus {
+  outline: 2px solid #000;
+  outline-offset: 2px;
+}
+
+/* ===== LOADING ANIMATIONS ===== */
+.fade-in {
+  animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== SCROLL TARGET STYLING ===== */
+#contact-form {
+  scroll-margin-top: 100px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== CONTACT FORM STYLING ===== */
+/* Form container styling */
+.bg-white.rounded-4 form {
+  margin-top: 1rem;
+}
+
+/* Form control styling */
+.bg-white.rounded-4 .form-control {
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  padding: 0.75rem 1rem;
+  transition: all 0.3s ease;
+  background-color: #f8f9fa;
+}
+
+.bg-white.rounded-4 .form-control:focus {
+  border-color: #000;
+  box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  transform: translateY(-1px);
+}
+
+.bg-white.rounded-4 .form-control::placeholder {
+  color: #6c757d;
+  font-weight: 400;
+}
+
+/* Textarea specific styling */
+.bg-white.rounded-4 textarea.form-control {
+  resize: vertical;
+  min-height: 80px;
+  line-height: 1.5;
+}
+
+.bg-white.rounded-4 textarea.form-control:focus {
+  min-height: 100px;
+}
+
+/* Contact method buttons */
+.bg-white.rounded-4 .contact-method {
+  border: 2px solid #dee2e6;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 0.6rem 1rem;
+  transition: all 0.3s ease;
+  background-color: #fff;
+  color: #495057;
+}
+
+.bg-white.rounded-4 .contact-method:hover {
+  border-color: #000;
+  background-color: #f8f9fa;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.bg-white.rounded-4 .contact-method.active {
+  background-color: #000;
+  border-color: #000;
+  color: #fff;
+}
+
+.bg-white.rounded-4 .contact-method.active:hover {
+  background-color: #1a1a1a;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Submit button styling */
+.bg-white.rounded-4 .btn-dark {
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  border: 2px solid #000;
+  background: linear-gradient(135deg, #000 0%, #1a1a1a 100%);
+}
+
+.bg-white.rounded-4 .btn-dark:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, #1a1a1a 0%, #000 100%);
+}
+
+.bg-white.rounded-4 .btn-dark:active {
+  transform: translateY(0);
+}
+
+/* Form label styling */
+.bg-white.rounded-4 .form-label {
+  color: #495057;
+  font-weight: 600;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Input group styling */
+.bg-white.rounded-4 .row.g-3 {
+  margin-top: 0.5rem;
+}
+
+/* Focus states for accessibility */
+.bg-white.rounded-4 .form-control:focus,
+.bg-white.rounded-4 .contact-method:focus,
+.bg-white.rounded-4 .btn-dark:focus {
+  outline: 2px solid #000;
+  outline-offset: 2px;
+}
+
+/* Animation for form appearance */
+.bg-white.rounded-4 form {
+  animation: slideInUp 0.6s ease-out;
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .bg-white.rounded-4 .form-control {
+    font-size: 0.8rem;
+    padding: 0.6rem 0.8rem;
+  }
+  
+  .bg-white.rounded-4 .contact-method {
+    font-size: 0.75rem;
+    padding: 0.5rem 0.75rem;
+  }
+  
+  .bg-white.rounded-4 .btn-dark {
+    font-size: 0.875rem;
+    padding: 0.6rem 1.25rem;
+  }
+}
+
+/* === Override: Hero logo pill must sit above hero::before overlay === */
+.hero .hero-logo-wrapper{
+    position:relative;      /* required for z-index to apply        */
+    z-index:5;              /* > .hero::before (z-index:1)          */
+    background:#fff !important;  /* force solid white                 */
+    padding:1rem 2rem;     /* roomy pill                        */
+    border-radius:5rem;
+    box-shadow:0 0.5rem 1.25rem rgba(0,0,0,.4);
+  }
+  
+  /* Scale logo big; responsive clamp keeps it from blowing out on phones */
+  .hero .hero-logo{
+    height:clamp(160px,22vw,240px);
+    width:auto;
+    display:block;
+  }
+  
+  /* ---------- MOBILE TWEAKS: hero logo + office card ---------- */
+@media (max-width: 768px){               /* tablets / wide phones */
+    .hero .hero-logo{
+      height: clamp(120px, 28vw, 160px);   /* flex with vw, smaller floor */
+    }
+    .hero .hero-logo-wrapper{
+      padding: .75rem 1.25rem;             /* tighter pill */
+    }
+    /* shrink & nudge the card in from the edges */
+    .hero .card{
+      max-width: 85%;
+      right: 1rem !important;
+      bottom: 1rem !important;
+    }
+  }
+  
+  @media (max-width: 576px){               /* small phones */
+    .hero{
+      padding-top: 75%;                    /* keep aspect a bit taller */
+    }
+    .hero .hero-logo{
+      height: 96px;                        /* hard cap for very narrow screens */
+    }
+    .hero .card{
+      position: static;                    /* remove absolute pinning */
+      margin: 1rem auto 0;                 /* center under hero image */
+    }
+  }
+  

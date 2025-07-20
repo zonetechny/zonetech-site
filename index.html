@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zonetech</title>
+    <!-- Bootstrap & Icons CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts (Playfair for hero headline) -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <!-- Top nav -->
+        <nav
+      class="navbar navbar-expand-lg bg-white border rounded-pill px-4 mx-auto mt-3"
+      style="max-width: 1280px"
+    >
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#mainNav"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-4">
+          <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact-form">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact-form">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="container-lg my-5">
+      <!-- HERO -->
+      <section
+        class="hero mb-5"
+        style="
+          /* background-image: url('https://images.pexels.com/photos/2539462/pexels-photo-2539462.jpeg'); */
+          background-image: url('IMG_9657.WEBP');
+        "
+      >
+        <!-- Logo: vertically centred, left-aligned -->
+        <div
+          class="position-absolute top-50 start-0 translate-middle-y ps-5"
+          style="z-index: 2"
+        >
+          <div
+            class="hero-logo-wrapper d-inline-flex align-items-center justify-content-center"
+          >
+            <img
+              src="zonetech_logo.png"
+              class="hero-logo"
+              alt="ZoneTech HVAC logo"
+            />
+          </div>
+        </div>
+
+        <!-- Office info -->
+        <div
+          class="position-absolute bottom-0 end-0 me-lg-5 me-3 mb-5"
+          style="max-width: 320px"
+        >
+          <div
+            class="card bg-dark bg-opacity-90 text-white shadow-lg border-0 rounded-4"
+          >
+            <div class="card-body">
+              <h5 class="card-title">Our Office</h5>
+              <address class="small lh-sm mb-3">
+                53 Spring St<br />
+                Staten Island, NY&nbsp;10304<br />
+                <abbr title="Phone">P:</abbr> 646‑923‑1754
+              </address>
+              <a href="#contact-form" class="btn btn-light w-100 rounded-pill"
+                >Contact us</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT US -->
+      <section class="row g-5 pb-5">
+        <div class="col-lg-6">
+          <h2 class="fw-semibold mb-3">About Us</h2>
+          <div class="bg-white rounded-4 p-4 shadow-sm mb-4">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h3 class="mb-0">Our Story</h3>
+              <i class="bi bi-house-heart fs-4"></i>
+            </div>
+            <div class="lh-sm">
+              <h6 class="mb-3">Our Story</h6>
+              <p class="mb-3">
+                Tri‑State HVAC began in a basement workshop where lifelong
+                friends Mark and Edin spent weekends rebuilding old air‑handlers
+                for fun. Twenty years later, that same hands‑on curiosity powers
+                a full‑service company licensed in New York, New Jersey, and
+                Connecticut.
+              </p>
+              <h6 class="mb-3">What We Do</h6>
+              <p class="mb-3">
+                We focus exclusively on HVAC repairs, preventive maintenance,
+                and energy‑efficient upgrades—no sideline plumbing or electrical
+                upsells. Whether it’s an emergency furnace failure in February
+                or a mid‑July compressor swap, our technicians bring
+                factory‑trained expertise and parts stocked for same‑day fixes.
+              </p>
+              <h6 class="mb-3">How We Work</h6>
+              <p class="mb-0">
+                Clients stick with us because we keep promises: on‑time
+                arrivals, transparent pricing, and a handshake‑strong
+                workmanship guarantee. Every job is treated like it’s in our own
+                home, and every service report includes actionable tips to cut
+                utility bills without sacrificing comfort.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+                  <!-- Contact Form -->
+        <div id="contact-form" class="bg-white rounded-4 p-4 shadow-sm mb-4">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h5 class="mb-0">Get In Touch</h5>
+              <i class="bi bi-envelope fs-4"></i>
+            </div>
+            <form>
+              <div class="row g-3">
+                <div class="col-6">
+                  <input
+                    type="text"
+                    class="form-control form-control-sm"
+                    placeholder="First Name"
+                    required
+                  />
+                </div>
+                <div class="col-6">
+                  <input
+                    type="text"
+                    class="form-control form-control-sm"
+                    placeholder="Last Name"
+                    required
+                  />
+                </div>
+                <div class="col-12">
+                  <input
+                    type="email"
+                    class="form-control form-control-sm"
+                    placeholder="Email Address"
+                    required
+                  />
+                </div>
+                <div class="col-12">
+                  <input
+                    type="tel"
+                    class="form-control form-control-sm"
+                    placeholder="Phone Number"
+                    required
+                  />
+                </div>
+                <div class="col-12">
+                  <textarea
+                    class="form-control form-control-sm"
+                    placeholder="Tell us what you're contacting us about..."
+                    rows="3"
+                    required
+                  ></textarea>
+                </div>
+                <div class="col-12">
+                  <label class="form-label small mb-2"
+                    >Preferred Contact Method:</label
+                  >
+                  <div class="d-flex gap-2">
+                    <button
+                      type="button"
+                      class="btn btn-outline-dark btn-sm flex-fill contact-method active"
+                      data-method="email"
+                    >
+                      <i class="bi bi-envelope me-1"></i>Email
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-outline-dark btn-sm flex-fill contact-method"
+                      data-method="phone"
+                    >
+                      <i class="bi bi-telephone me-1"></i>Phone
+                    </button>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn btn-dark w-100 rounded-pill">
+                    Send Message
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-white py-5 mt-5">
+      <div class="container-lg">
+        <div class="row g-4">
+          <!-- Company Info -->
+          <div class="col-lg-4">
+            <h5 class="fw-semibold mb-3">ZoneTech</h5>
+            <p class="text-muted mb-3">
+              Your trusted local HVAC experts serving the tri-state area with
+              reliable heating, ventilation, and air conditioning solutions.
+            </p>
+            <div class="d-flex gap-3">
+              <a href="#" class="text-white text-decoration-none"
+                ><i class="bi bi-instagram fs-5"></i
+              ></a>
+              <a href="#" class="text-white text-decoration-none"
+                ><i class="bi bi-facebook fs-5"></i
+              ></a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="col-lg-2"></div>
+
+          <!-- Services -->
+          <div class="col-lg-2">
+            <h6 class="fw-semibold mb-3">Services</h6>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <a href="#" class="text-muted text-decoration-none"
+                  >HVAC Repair</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="#" class="text-muted text-decoration-none"
+                  >Installation</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="#" class="text-muted text-decoration-none"
+                  >Maintenance</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="#" class="text-muted text-decoration-none"
+                  >Emergency Service</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Service Areas -->
+          <div class="col-lg-2">
+            <h6 class="fw-semibold mb-3">Service Areas</h6>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <a href="#" class="text-muted text-decoration-none">New York</a>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="text-muted text-decoration-none"
+                  >New Jersey</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="#" class="text-muted text-decoration-none"
+                  >Connecticut</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="#" class="text-muted text-decoration-none"
+                  >Tri-State Area</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact -->
+          <div class="col-lg-2">
+            <h6 class="fw-semibold mb-3">Contact</h6>
+            <address class="text-muted small">
+                53 Spring St<br />
+                Staten Island, NY&nbsp;10304<br />
+                <abbr title="Phone">P:</abbr> 646‑923‑1754
+            </address>
+          </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="border-top border-secondary pt-4 mt-4">
+          <div class="row align-items-center">
+            <div class="col-md-6">
+              <p class="text-muted small mb-0">
+                &copy; 2025 Zonetech. All rights reserved.
+              </p>
+            </div>
+            <div class="col-md-6 text-md-end">
+              <ul class="list-inline small mb-0">
+                <li class="list-inline-item">
+                  <a href="#" class="text-muted text-decoration-none"
+                    >Privacy Policy</a
+                  >
+                </li>
+                <li class="list-inline-item">
+                  <a href="#" class="text-muted text-decoration-none"
+                    >Terms of Service</a
+                  >
+                </li>
+                <li class="list-inline-item">
+                  <a href="#" class="text-muted text-decoration-none"
+                    >Cookie Policy</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script>
+      // Contact method button functionality
+      document.addEventListener("DOMContentLoaded", function () {
+        const contactMethods = document.querySelectorAll(".contact-method");
+
+        contactMethods.forEach((button) => {
+          button.addEventListener("click", function () {
+            // Remove active class from all buttons
+            contactMethods.forEach((btn) => btn.classList.remove("active"));
+            // Add active class to clicked button
+            this.classList.add("active");
+          });
+        });
+
+        // Form submission handling
+        const contactForm = document.querySelector("form");
+        contactForm.addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          // Get form data
+          const formData = new FormData(this);
+          const firstName = this.querySelector(
+            'input[placeholder="First Name"]'
+          ).value;
+          const lastName = this.querySelector(
+            'input[placeholder="Last Name"]'
+          ).value;
+          const email = this.querySelector('input[type="email"]').value;
+          const phone = this.querySelector('input[type="tel"]').value;
+          const message = this.querySelector("textarea").value;
+          const preferredMethod = document.querySelector(
+            ".contact-method.active"
+          ).dataset.method;
+
+          // Simple validation
+          if (!firstName || !lastName || !email || !phone || !message) {
+            alert("Please fill in all fields");
+            return;
+          }
+
+          // Here you would typically send the data to your server
+          console.log("Contact Form Data:", {
+            firstName,
+            lastName,
+            email,
+            phone,
+            message,
+            preferredMethod,
+          });
+
+          // Show success message
+          alert("Thank you! We will contact you soon.");
+          this.reset();
+          document
+            .querySelector('.contact-method[data-method="email"]')
+            .classList.add("active");
+          document
+            .querySelector('.contact-method[data-method="phone"]')
+            .classList.remove("active");
+        });
+      });
+    </script>
+  </body>
+</html>
